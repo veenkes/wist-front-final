@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* WIST Financial Automation System - Design System
+   Premium fintech-inspired theme with WIST branding
+   All colors MUST be HSL.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* WIST Brand Colors */
+    --wist-yellow: 45 95% 58%;
+    --wist-yellow-light: 46 95% 70%;
+    --wist-yellow-glow: 46 100% 80%;
+    --wist-navy: 220 30% 15%;
+    --wist-navy-light: 220 25% 25%;
+    --wist-warm: 35 30% 97%;
+    
+    /* Premium Warm Palette */
+    --background: 38 25% 97%;
+    --foreground: 220 30% 15%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 15%;
+    --card-shadow: 220 20% 85%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 15%;
+    
+    --primary: 45 95% 55%;
+    --primary-foreground: 220 30% 12%;
+    --primary-hover: 45 95% 48%;
+    
+    --secondary: 220 15% 94%;
+    --secondary-foreground: 220 30% 15%;
+    --secondary-hover: 220 15% 90%;
+    
+    --muted: 35 15% 94%;
+    --muted-foreground: 220 15% 45%;
+    
+    --accent: 45 95% 55%;
+    --accent-foreground: 220 30% 12%;
+    
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --success: 152 69% 38%;
+    --success-foreground: 0 0% 98%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 98%;
+    
+    --info: 210 80% 55%;
+    --info-foreground: 0 0% 98%;
+    
+    --border: 220 13% 89%;
+    --input: 220 13% 89%;
+    --ring: 45 95% 55%;
+    
+    /* Premium Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(45 95% 55%), hsl(38 95% 62%));
+    --gradient-navy: linear-gradient(180deg, hsl(220 35% 14%), hsl(220 30% 20%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(35 20% 97%));
+    --gradient-subtle: linear-gradient(180deg, hsl(38 25% 97%), hsl(35 15% 95%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 35% 14%), hsl(220 25% 22%), hsl(230 20% 28%));
+    
+    /* Elegant Shadows */
+    --shadow-card: 0 1px 3px hsl(220 20% 85% / 0.12), 0 4px 16px hsl(220 20% 85% / 0.08);
+    --shadow-widget: 0 4px 24px -4px hsl(220 20% 80% / 0.18);
+    --shadow-modal: 0 20px 60px -12px hsl(220 20% 70% / 0.25);
+    --shadow-glow: 0 0 30px hsl(45 95% 55% / 0.35);
+    --shadow-yellow: 0 4px 20px -4px hsl(45 95% 55% / 0.3);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s ease-out;
+    
+    --radius: 0.75rem;
+
+    --sidebar-background: 220 35% 14%;
+    --sidebar-foreground: 220 15% 85%;
+    --sidebar-primary: 45 95% 55%;
+    --sidebar-primary-foreground: 220 30% 12%;
+    --sidebar-accent: 220 25% 20%;
+    --sidebar-accent-foreground: 220 10% 90%;
+    --sidebar-border: 220 25% 22%;
+    --sidebar-ring: 45 95% 55%;
+  }
+
+  .dark {
+    --background: 220 30% 7%;
+    --foreground: 220 10% 95%;
+    
+    --card: 220 25% 11%;
+    --card-foreground: 220 10% 95%;
+    --card-shadow: 220 40% 4%;
+    
+    --popover: 220 25% 11%;
+    --popover-foreground: 220 10% 95%;
+    
+    --primary: 45 95% 58%;
+    --primary-foreground: 220 30% 8%;
+    --primary-hover: 45 95% 65%;
+    
+    --secondary: 220 20% 16%;
+    --secondary-foreground: 220 10% 95%;
+    --secondary-hover: 220 20% 20%;
+    
+    --muted: 220 20% 14%;
+    --muted-foreground: 220 10% 60%;
+    
+    --accent: 45 95% 58%;
+    --accent-foreground: 220 30% 8%;
+    
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 220 10% 95%;
+    
+    --success: 152 69% 42%;
+    --success-foreground: 220 10% 95%;
+    
+    --warning: 38 92% 55%;
+    --warning-foreground: 220 30% 8%;
+    
+    --info: 210 80% 60%;
+    --info-foreground: 220 10% 95%;
+    
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 45 95% 58%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(45 95% 55%), hsl(38 95% 62%));
+    --gradient-navy: linear-gradient(180deg, hsl(220 30% 8%), hsl(220 25% 14%));
+    --gradient-card: linear-gradient(145deg, hsl(220 25% 11%), hsl(220 20% 14%));
+    --gradient-subtle: linear-gradient(180deg, hsl(220 30% 7%), hsl(220 25% 9%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 35% 8%), hsl(220 25% 14%), hsl(230 20% 18%));
+    
+    --shadow-card: 0 1px 3px hsl(220 40% 4% / 0.2), 0 4px 16px hsl(220 40% 4% / 0.15);
+    --shadow-widget: 0 4px 24px -4px hsl(220 40% 4% / 0.3);
+    --shadow-modal: 0 20px 60px -12px hsl(220 40% 4% / 0.5);
+    --shadow-glow: 0 0 30px hsl(45 95% 58% / 0.2);
+    --shadow-yellow: 0 4px 20px -4px hsl(45 95% 58% / 0.2);
+
+    --sidebar-background: 220 30% 8%;
+    --sidebar-foreground: 220 15% 80%;
+    --sidebar-primary: 45 95% 58%;
+    --sidebar-primary-foreground: 220 30% 8%;
+    --sidebar-accent: 220 25% 15%;
+    --sidebar-accent-foreground: 220 10% 90%;
+    --sidebar-border: 220 25% 15%;
+    --sidebar-ring: 45 95% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+}
+
+/* Premium animations and transitions */
+@layer utilities {
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-fast {
+    transition: var(--transition-fast);
+  }
+}
