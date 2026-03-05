@@ -28,7 +28,6 @@ const Sidebar: React.FC = () => {
   const { user } = useAuth();
   const { t } = useTheme();
 
-  // Navigation for all users (Teachers removed)
   const navigationItems: NavItem[] = [
     { icon: LayoutDashboard, label: t('nav.dashboard'), path: '/dashboard' },
     { icon: Users, label: t('nav.studentsList'), path: '/students-list' },
